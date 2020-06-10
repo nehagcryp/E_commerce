@@ -1,0 +1,14 @@
+<h1 class="jumbotron"><%=  @product.name.capitalize  %></h1>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <p><%= @product.description %>
+      </p>
+      <p><small> SGD </small> <%=  @product.price  %></p>
+      <%= link_to 'Add to Cart', add_to_cart_path(@product), method: :put %>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Back to Product List', products_path %>
+    </div>
+  </div>
+</div>
