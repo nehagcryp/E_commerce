@@ -29,6 +29,18 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'simple_form'
+gem 'faker'
+gem 'devise'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem "redis", ">= 3.2.0"
+gem 'jquery-rails'
+gem 'braintree', '~> 2.33.1'
+gem 'gon', '~> 6.2.0'
+gem 'hiredis'
+gem 'figaro'
+gem 'foundation-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -3,13 +3,12 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable,:validatable
+         :recoverable, :rememberable
 
   has_many :orders
   has_many :products, through: :orders
   
 
-   
   def current_user_cart
     "cart#{id}"
   end
