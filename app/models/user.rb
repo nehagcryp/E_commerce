@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :orders
   has_many :products, through: :orders
-  
+
 
   def current_user_cart
     "cart#{id}"

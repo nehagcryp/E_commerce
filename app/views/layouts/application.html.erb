@@ -20,40 +20,37 @@
 
           <div class="navlink"><%= link_to category.name.capitalize, category_path(category) %>
           </div>
-          <% end %>
-
-          <% unless user_signed_in? %>
-
-          <div class="navlink">
-          <%= link_to 'Login', new_user_session_path %>
-        </div>
         <% end %>
+          <div class="navlink">
+           <%= link_to 'Login', new_user_session_path %>
+        </div>
+        
 
-        <% if user_signed_in? %>
+      <% if user_signed_in? %>
 
-        <div class="navlink">
+       <div class="navlink">
         <%= link_to 'Cart (' + "#{current_user.cart_count}" + ')', cart_path %>
       </div>
-      <div class="navlink">
+        <div class="navlink">
         <%= link_to "Sign out", destroy_user_session_path,:method => 'delete' %>
       </div>
       <% end %>
 
       <% if admin_signed_in? %>
       <h4>Admin</h4>
-      <div class="navlink">
+        <div class="navlink">
         <%= link_to 'Categories', admin_categories_path %>
       </div>
-      <div class="navlink">
+        <div class="navlink">
         <%= link_to 'Products', admin_products_path %>
       </div>
-      <div class="navlink">
+        <div class="navlink">
         <%= link_to 'Order', admin_orders_path %>
       </div>
       <%end %>
     </div>
-    <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: name %>
+         <% flash.each do |name, msg| %>
+         <%= content_tag :div, msg, class: name %>
     <% end %>
 
 

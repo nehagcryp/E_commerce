@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
- before_action :authenticate_user!
+before_action :authenticate_user!
 
   def show
     @cart_products_with_qty = current_user.get_cart_products_with_qty
