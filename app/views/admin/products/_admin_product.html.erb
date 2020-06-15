@@ -1,0 +1,13 @@
+<tr>
+	<td><%= admin_product.name %></td>
+	<td><%= admin_product.description %></td>
+	<td><%= admin_product.price %></td>
+	<td><%#= admin_product.category_ids %></td>
+	<td><%= link_to 'Edit', edit_admin_product_path(admin_product) %>
+	</td>
+	<td><%= link_to 'Delete', admin_product_path(admin_product), method: :delete %>
+	</td>
+</tr>
+
+
+

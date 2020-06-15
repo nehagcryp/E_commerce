@@ -4,7 +4,7 @@
     <div class="card-body">
       <p><%= @product.description %>
       </p>
-      <p><small> SGD </small> <%=  @product.price  %></p>
+      <p><small> SGD </small><%=  @product.price  %></p>
       <%= link_to 'Add to Cart', add_to_cart_path(@product), method: :put %>
     </div>
     <div class="card-footer">

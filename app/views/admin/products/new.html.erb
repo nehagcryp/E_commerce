@@ -1,0 +1,31 @@
+<h1 class="jumbotron">Add a Product</h1>
+<div class="container">
+	<%= simple_form_for [:admin, @product], class: "form-horizontal" do |f| %>
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>
+		<%= f.label :price %><br>
+		<%= f.text_field :price %>
+	</p>
+
+	<p> 
+		<%#= f.association :categories, collection: Category.all, as: :check_boxes, include_hidden: false %>
+
+	<p>
+    <%= f.submit %>
+	</p>
+
+	<% end %>
+
+    <%= link_to 'Back to Product List', admin_products_path %>
+   
+   

@@ -1,0 +1,19 @@
+<h1 class="jumbotron">Admin | Orders </h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 card">
+			<table class="table">
+				<thead>
+					<th>User</th>
+					<th>Product</th>
+					<th>Quantity</th>
+					<th>Order Time</th>
+				</thead>
+				<tbody>
+				</tbody>
+				<%= render partial: "admin_order", collection: @order %>
+			</table>
+		</div>
+	</div>
+</div>
